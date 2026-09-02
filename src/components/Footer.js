@@ -13,7 +13,7 @@ export default function Footer() {
               <PawPrint size={16} />
             </span>
             <span className="font-display text-lg font-semibold text-pine">
-              Paws &amp; Homes
+              Paws & Homes
             </span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-ink/70">
@@ -28,7 +28,8 @@ export default function Footer() {
           </h3>
           <ul className="mt-3 space-y-2 text-sm text-ink/80">
             <li className="flex items-center gap-2">
-              <Mail size={15} /> hello@pawsandhomes.example
+              <Mail size={15} /> 
+              paws&homes@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <Phone size={15} /> +880 1XX-XXXXXXX
@@ -58,7 +59,7 @@ export default function Footer() {
       </div>
 
       <div className="paper-divider mx-5 py-4 text-center font-tag text-[0.7rem] uppercase tracking-widest text-ink/50">
-        © {new Date().getFullYear()} Paws &amp; Homes. All rights reserved.
+        © {new Date().getFullYear()} Paws & Homes. All rights reserved.
       </div>
     </footer>
   );
