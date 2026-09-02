@@ -1,26 +1,83 @@
 @import "tailwindcss";
+@import "@heroui/styles"; 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  
+  --color-paper: #f1ecdd;      
+  --color-paper-dark: #e6ddc4; 
+  --color-ink: #22322c;        
+  --color-pine: #2f4a3e;       
+  --color-pine-light: #4c6b5c;
+  --color-teal: #2b6e6b;       
+  --color-teal-dark: #1f5250;
+  --color-mustard: #d9a441;    
+  --color-rust: #a1442b;        
+  --color-line: #c9bd9c;        
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-paper: var(--color-paper);
+  --color-paper-dark: var(--color-paper-dark);
+  --color-ink: var(--color-ink);
+  --color-pine: var(--color-pine);
+  --color-pine-light: var(--color-pine-light);
+  --color-teal: var(--color-teal);
+  --color-teal-dark: var(--color-teal-dark);
+  --color-mustard: var(--color-mustard);
+  --color-rust: var(--color-rust);
+  --color-line: var(--color-line);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-tag: var(--font-jetbrains);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+
+.kennel-tag {
+  position: relative;
+  background: #fffdf6;
+  border: 1px solid var(--color-line);
+  border-radius: 14px;
+}
+
+.kennel-tag::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  z-index: 10;
+}
+
+
+.ink-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-tag);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border: 1.5px dashed currentColor;
+  border-radius: 999px;
+  transform: rotate(-3deg);
+}
+
+.paper-divider {
+  border-top: 1px dashed var(--color-line);
+}
+
+::selection {
+  background: var(--color-mustard);
+  color: var(--color-ink);
 }
